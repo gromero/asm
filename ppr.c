@@ -13,7 +13,7 @@ int main(int argc, char **argv)
    asm ("mfppr %[ppr_];" : [ppr_] "+r" (ppr_) );
    if (i == atoi(argv[1]))
      printf("PPR: %lx\n", ppr_); // print PPR but also trigger a sc
-   if (i == atoi(argv[1] + 1))
+   if (i == atoi(argv[1]) + 1)
      printf("PPR: %lx\n", ppr_); // print PPR after we trigged a sc
  }
 }
